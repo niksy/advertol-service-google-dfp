@@ -109,7 +109,7 @@ MIT © [Ivan Nikolić](http://ivannikolic.com)
 [ci]: https://travis-ci.com/niksy/advertol-service-google-dfp
 [ci-img]: https://travis-ci.com/niksy/advertol-service-google-dfp.svg?branch=master
 [browserstack]: https://www.browserstack.com/
-[browserstack-img]: https://www.browserstack.com/automate/badge.svg?badge_key=
+[browserstack-img]: https://www.browserstack.com/automate/badge.svg?badge_key=WnJmTGFCek5KWFRxMjhrOE1wdE9CYUNkK3B3Y1U4cVl3SndsQjVEbmV4MD0tLWNzajBEdG1neHZROS94K0NpMW1qbWc9PQ==--70b8da2c741fdc30f6011a0ade9d36429c8b8f52
 [googletag-define-slot]: https://developers.google.com/doubleclick-gpt/reference#googletag.defineSlot
 [googletag-define-outofpage-slot]: https://developers.google.com/doubleclick-gpt/reference#googletag.defineOutOfPageSlot
 [googletag-refresh]: https://developers.google.com/doubleclick-gpt/reference#googletag.PubAdsService_refresh

@@ -1,6 +1,6 @@
 {
   "name": "@advertol/service-google-dfp",
-  "version": "1.0.4-alpha.0",
+  "version": "0.0.4-alpha.0",
   "description": "Google DFP/Ad Manager service.",
   "main": "index.cjs.js",
   "module": "index.esm.js",
@@ -29,7 +29,7 @@
     "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
   },
   "dependencies": {
-    "@advertol/core": "^1.0.2-alpha.0"
+    "@advertol/core": "^1.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
