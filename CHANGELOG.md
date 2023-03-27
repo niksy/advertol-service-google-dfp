@@ -2,6 +2,13 @@
 
 ## [Unreleased][]
 
+### Changed
+
+- Skip multiple calls to service setup if pubads is ready
+- Remove event listeners when service has been destroyed
+- Upgrade dependencies
+
+
 ## [1.0.0][] - 2019-04-01
 
 ### Added
