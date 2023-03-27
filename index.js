@@ -71,6 +71,10 @@ class GoogleDfpService extends Service {
 			return;
 		}
 
+		if ( window.googletag.pubadsReady ) {
+			return;
+		}
+
 		window.googletag.pubads().enableSingleRequest();
 		window.googletag.pubads().collapseEmptyDivs(true);
 		window.googletag.pubads().disableInitialLoad();
