@@ -1,4 +1,5 @@
 import { Service } from '@advertol/core';
+import manageSideEffects from 'manage-side-effects';
 
 class GoogleDfpService extends Service {
 
@@ -14,6 +15,8 @@ class GoogleDfpService extends Service {
 		this.slotResolvedZones = [];
 		this.refreshedZones = [];
 		this.displayedZones = [];
+
+		this.sideEffects = manageSideEffects();
 
 		const {
 			zones = [],
@@ -82,22 +85,32 @@ class GoogleDfpService extends Service {
 			return;
 		}
 
-		window.googletag.pubads().addEventListener('slotRenderEnded', ( data ) => {
+		this.sideEffects.add(() => {
 
-			const adUnitPath = data.slot.getAdUnitPath();
-			const response = data.slot.getResponseInformation();
+			const handler = ( data ) => {
 
-			const callback =
-				this.isZoneEmpty(response) ?
-					this.emptyZoneCallbacks[adUnitPath] :
-					this.filledZoneCallbacks[adUnitPath];
+				const adUnitPath = data.slot.getAdUnitPath();
+				const response = data.slot.getResponseInformation();
 
-			if ( typeof callback === 'function' ) {
-				callback();
-			}
+				const callback =
+					this.isZoneEmpty(response) ?
+						this.emptyZoneCallbacks[adUnitPath] :
+						this.filledZoneCallbacks[adUnitPath];
 
-			delete this.filledZoneCallbacks[adUnitPath];
-			delete this.emptyZoneCallbacks[adUnitPath];
+				if ( typeof callback === 'function' ) {
+					callback();
+				}
+
+				delete this.filledZoneCallbacks[adUnitPath];
+				delete this.emptyZoneCallbacks[adUnitPath];
+
+			};
+
+			window.googletag.pubads().addEventListener('slotRenderEnded', handler);
+
+			return () => {
+				window.googletag.pubads().removeEventListener('slotRenderEnded', handler);
+			};
 
 		});
 
@@ -214,6 +227,10 @@ class GoogleDfpService extends Service {
 	 */
 	isZoneEmpty ( response ) {
 		return response === null;
+	}
+
+	destroy () {
+		this.sideEffects.removeAll();
 	}
 
 }

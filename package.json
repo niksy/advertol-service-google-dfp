@@ -29,7 +29,8 @@
     "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
   },
   "dependencies": {
-    "@advertol/core": "^1.0.0"
+    "@advertol/core": "^1.0.0",
+    "manage-side-effects": "^1.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
