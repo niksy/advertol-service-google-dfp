@@ -21,10 +21,12 @@ class GoogleDfpService extends Service {
 		const {
 			zones = [],
 			onSetup = () => {},
-			refreshZones = this.refreshZones
+			refreshZones = this.refreshZones,
+			displayZone = this.displayZone
 		} = options;
 
 		this.refreshZones = refreshZones.bind(this);
+		this.displayZone = displayZone.bind(this);
 
 		zones.forEach(({ id, adUnitPath, slot }) => {
 			this.addZone({ id, adUnitPath, slot });

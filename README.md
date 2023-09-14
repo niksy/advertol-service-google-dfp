@@ -78,6 +78,14 @@ Refresh slots.
 
 By default, it calls [`refresh`][googletag-refresh] method.
 
+#### displayZone({element, id})
+
+Type: `Function`
+
+Display zone by ID.
+
+By default, it calls [`display`][googletag-display] method.
+
 ##### slots
 
 Type: `googletag.Slot[]`
@@ -113,3 +121,4 @@ MIT © [Ivan Nikolić](http://ivannikolic.com)
 [googletag-define-slot]: https://developers.google.com/doubleclick-gpt/reference#googletag.defineSlot
 [googletag-define-outofpage-slot]: https://developers.google.com/doubleclick-gpt/reference#googletag.defineOutOfPageSlot
 [googletag-refresh]: https://developers.google.com/doubleclick-gpt/reference#googletag.PubAdsService_refresh
+[googletag-display]: https://developers.google.com/doubleclick-gpt/reference#googletag.PubAdsService_display
