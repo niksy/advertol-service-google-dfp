@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [1.2.0][] - 2023-09-14
+
 ### Added
 
 * Zone display override option
@@ -24,3 +26,7 @@
 
 [1.1.2]: https://github.com/niksy/advertol-service-google-dfp/compare/v1.0.0...v1.1.2
 [1.0.0]: https://github.com/niksy/advertol-service-google-dfp/tree/v1.0.0
+
+
+[Unreleased]: https://github.com/niksy/advertol-service-google-dfp/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/niksy/advertol-service-google-dfp/tree/v1.2.0
