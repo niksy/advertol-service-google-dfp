@@ -235,6 +235,16 @@ class GoogleDfpService extends Service {
 		return response === null;
 	}
 
+	afterZoneRegistered({ element }) {
+		this.sideEffects.add(() => {
+			return () => {
+				element.style.display = '';
+				element.innerHTML = '';
+				delete element.dataset.googleQueryId;
+			};
+		});
+	}
+
 	destroy () {
 		this.sideEffects.removeAll();
 	}

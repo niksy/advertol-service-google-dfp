@@ -2,6 +2,10 @@
 
 ## [Unreleased][]
 
+### Changed
+
+* Clean placeholders from previous banner manager instance changes
+
 ## [1.2.0][] - 2023-09-14
 
 ### Added
