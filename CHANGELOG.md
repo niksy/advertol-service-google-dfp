@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [1.2.1][] - 2025-04-03
+
 ### Changed
 
 * Clean placeholders from previous banner manager instance changes
@@ -32,5 +34,6 @@
 [1.0.0]: https://github.com/niksy/advertol-service-google-dfp/tree/v1.0.0
 
 
-[Unreleased]: https://github.com/niksy/advertol-service-google-dfp/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/niksy/advertol-service-google-dfp/compare/v1.2.1...HEAD
+[1.2.1]: https://github.com/niksy/advertol-service-google-dfp/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/niksy/advertol-service-google-dfp/tree/v1.2.0

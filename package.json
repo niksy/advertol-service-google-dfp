@@ -1,6 +1,6 @@
 {
   "name": "@advertol/service-google-dfp",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Google DFP/Ad Manager service.",
   "main": "index.cjs.js",
   "module": "index.esm.js",
